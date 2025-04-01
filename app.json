@@ -1,4 +1,22 @@
 {
   "name": "my-app",
-  "slug": "my-app"
+  "slug": "my-app",
+  "plugins": [
+    [
+      "expo-build-properties",
+      {
+        "android": {
+          "compileSdkVersion": 35,
+          "targetSdkVersion": 34,
+          "buildToolsVersion": "35.0.0",
+          "kotlinVersion": "1.9.24"
+        }
+      }
+    ],
+    "expo-router",
+    "react-native-vision-camera"
+  ],
+  "android": {
+    "package": "com.anonymous.myapp"
+  }
 }
