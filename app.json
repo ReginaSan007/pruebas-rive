@@ -1,22 +1,39 @@
 {
-  "name": "my-app",
-  "slug": "my-app",
-  "plugins": [
-    [
-      "expo-build-properties",
-      {
-        "android": {
-          "compileSdkVersion": 35,
-          "targetSdkVersion": 34,
-          "buildToolsVersion": "35.0.0",
-          "kotlinVersion": "1.9.24"
+  "expo": {
+    "name": "my-app",
+    "slug": "my-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "android": {
+      "package": "com.anonymus.myapp",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "react-native-vision-camera",
+        {
+          "cameraPermissionText": "$(PRODUCT_NAME) needs access to your Camera.",
+          "enableMicrophonePermission": true,
+          "microphonePermissionText": "$(PRODUCT_NAME) needs access to your Microphone."
         }
-      }
-    ],
-    "expo-router",
-    "react-native-vision-camera"
-  ],
-  "android": {
-    "package": "com.anonymous.myapp"
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 26,
+            "compileSdkVersion": 35,
+            "targetSdkVersion": 34,
+            "buildToolsVersion": "35.0.0",
+            "kotlinVersion": "1.9.24"
+          }
+        }
+      ]
+    ]
   }
 }
